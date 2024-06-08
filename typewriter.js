@@ -1,20 +1,22 @@
 const sentence = "hello there from lighthouse labs";
 
-const delay = function(sen) {
-  let string = sen
+const delay = function (sen) {
+  let string = sen;
+  let counter = 0;
   for (const char of string) {
     //process.stdout.write(char);
-  console.log(char) 
-  
-  
+    
+  setTimeout(() => {
+    process.stdout.write(char);
+  }, counter * 50); 
+  counter++
+  }
   
   setTimeout(() => {
-  
-  },  3000); 
-  }
-
-  return setTimeout
-}
+    process.stdout.write('\n');
+  }, counter * 50);
+};
 
 
 
+delay("hello there from lighthouse labs")
